@@ -62,7 +62,7 @@ const Form = () => {
   };
   async function sendRequest(car) {
     axios
-      .post("LINK", car)
+      .post("http://172.20.0.12/api/get-price", car)
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
   }
