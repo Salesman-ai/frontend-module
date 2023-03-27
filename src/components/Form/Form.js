@@ -7,6 +7,7 @@ import Mileage from "./Mileage";
 import Power from "./Power";
 import Year from "./Year";
 import { useState } from "react";
+
 const Form = () => {
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
@@ -57,8 +58,14 @@ const Form = () => {
       transmission: transmission,
       power: power,
     };
-    console.log(car);
+    sendRequest(car);
   };
+  async function sendRequest(car) {
+    axios
+      .post("http://172.20.0.12/api/get-price", car)
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
+  }
   return (
     <form onSubmit={sendForm}>
       <BrandAndModel brand={getBrand} model={getModel} />
