@@ -22,3 +22,8 @@
 .container {
   text-align: left;
 }
+.color {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c7c7cb;
+}
