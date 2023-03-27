@@ -1,0 +1,54 @@
+name: Deploy Fronted to Production-repository
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  copy-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get Frontend repository
+      uses: actions/checkout@v2
+
+    - name: Clone Production repository
+      uses: actions/checkout@v2
+      with:
+        repository: Salesman-ai/production-repository
+        path: /home/runner/work/frontend-module/frontend-module/production-repository
+        token: ${{ secrets.REPO_ACCESS_TOKEN }}
+
+    - name: Check tree
+      run: |
+        cd /home/runner/work/frontend-module
+        tree
+
+    - name: Create Node Environment
+      uses: actions/setup-node@v1
+      with: 
+        node-version: 18.x
+    - name: Install Packages and Build Application
+      run: |
+        npm install
+        npm run build
+
+    - name: Remove old files from Production repository
+      run: |
+        cd /home/runner/work/frontend-module/frontend-module/production-repository
+        rm -rf Frontend
+        mkdir Frontend
+        
+    - name: Copy files from Backend repo to Production repo
+      run: |
+        cd /home/runner/work/frontend-module/frontend-module
+        cp -R build/* production-repository/Frontend/
+
+    - name: Commit and push changes to production-repository
+      run: |
+        cd /home/runner/work/frontend-module/frontend-module/production-repository
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Update Frontend folder [via Frontend repository]"
+        git push origin main
