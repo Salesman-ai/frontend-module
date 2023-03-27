@@ -1,0 +1,24 @@
+.Navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #072037;
+  height: 5rem;
+  width: 100%;
+  color: #22add9;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  line-height: 1.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container::first-letter {
+  color: White;
+  font-size: 4rem;
+}
+
+.container {
+  text-align: left;
+}
