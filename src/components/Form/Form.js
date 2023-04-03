@@ -6,6 +6,7 @@ import Transmission from "./Transmission";
 import Mileage from "./Mileage";
 import Power from "./Power";
 import Year from "./Year";
+import EngineDisplacement from './EngineDisplacement'
 import { useState } from "react";
 import axios from 'axios';
 
@@ -20,6 +21,7 @@ const Form = () => {
   const [power, setPower] = useState("");
   const [transmission, setTransmission] = useState("");
   const [year, setYear] = useState("");
+  const [engine,setEngine] = useState("");
   const getBrand = (data) => {
     setBrand(data);
   };
@@ -47,6 +49,9 @@ const Form = () => {
   const getYear = (data) => {
     setYear(data);
   };
+  const getEngine = data =>{
+    setEngine(data)
+  }
   const sendForm = (event) => {
     event.preventDefault();
     const car = {
@@ -59,8 +64,10 @@ const Form = () => {
       mileage: mileage,
       transmission: transmission,
       power: power,
+      engineDisplacement: engine,
     };
     sendRequest(car);
+    console.log(car)
   };
   async function sendRequest(car) {
     axios
@@ -78,6 +85,7 @@ const Form = () => {
       <Mileage mileage={getMileage} />
       <Power power={getPower} />
       <Year year={getYear} />
+      <EngineDisplacement engine={getEngine}/>
       <button type="submit">Check Price!</button>
     </form>
   );
