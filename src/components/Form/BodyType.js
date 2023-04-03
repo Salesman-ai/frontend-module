@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 const bodyTypes = [
+  "coupe",
   "sedan",
   "minivan",
   "station wagon",
+  "hatchback 3 doors",
   "hatchback 5 doors",
+  "jeep 3 dors",
   "jeep 5 dors",
+  "liftback",
+  "open",
+  "pickup",
 ];
-
 const BodyType = (props) => {
   const [bodyType, setBodyType] = useState("");
 
