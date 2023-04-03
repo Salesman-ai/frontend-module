@@ -1,16 +1,12 @@
-import { useState } from "react";
-
 const Transmission = (props) => {
   const transmissions = ["AT", "CVT", "Automatic", "Manual", "Robot"];
-  const [transmission, setTransmission] = useState("");
   const changeTransmission = (event) => {
-    setTransmission(event.target.value);
     props.transmission(event.target.value);
   };
   return (
     <div>
       <label>Transmission</label>
-      <select value={transmission} onChange={changeTransmission}>
+      <select value={props.value} onChange={changeTransmission}>
         <option hidden value="Choose a transmission">
           Choose a transmission
         </option>

@@ -1,8 +1,5 @@
-import { useState } from "react";
 const Power = (props) => {
-  const [power, setPower] = useState("");
   const changePower = (event) => {
-    setPower(event.target.value);
     props.power(event.target.value);
   };
   return (
@@ -12,7 +9,7 @@ const Power = (props) => {
         type="number"
         min="1"
         step="1"
-        value={power}
+        value={props.value}
         onChange={changePower}
       ></input>
     </div>
