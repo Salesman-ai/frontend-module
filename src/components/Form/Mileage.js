@@ -1,8 +1,5 @@
-import { useState } from "react";
 const Mileage = (props) => {
-  const [mileage, setMileage] = useState("");
   const changeMileage = (event) => {
-    setMileage(event.target.value);
     props.mileage(event.target.value);
   };
   return (
@@ -12,7 +9,7 @@ const Mileage = (props) => {
         type="number"
         min="1"
         step="1"
-        value={mileage}
+        value={props.value}
         onChange={changeMileage}
       ></input>
     </div>

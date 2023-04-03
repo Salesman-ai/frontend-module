@@ -1,8 +1,5 @@
-import React, {useState} from 'react'
 const EngineDisplacement = props =>{
-    const [engine,setEngine] = useState('');
     const changeEngine = event =>{
-        setEngine(event.target.value);
         props.engine(event.target.value)
     }
     return <div>
@@ -12,7 +9,7 @@ const EngineDisplacement = props =>{
         min="0"
         step="0.1"
         max="20"
-        value={engine}
+        value={props.value}
         onChange={changeEngine}
       ></input>
     </div>

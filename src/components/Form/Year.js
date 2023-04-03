@@ -1,8 +1,5 @@
-import { useState } from "react";
 const Year = (props) => {
-  const [year, setYear] = useState("");
   const changeYear = (event) => {
-    setYear(event.target.value);
     props.year(event.target.value);
   };
   return (
@@ -13,7 +10,7 @@ const Year = (props) => {
         min="1900"
         max={new Date().getFullYear()}
         step="1"
-        value={year}
+        value={props.value}
         onChange={changeYear}
       ></input>
     </div>

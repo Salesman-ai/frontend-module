@@ -78,14 +78,14 @@ const Form = () => {
   return (
     <form onSubmit={sendForm}>
       <BrandAndModel brand={getBrand} model={getModel} />
-      <BodyType bodyType={getBodyType} />
+      <BodyType bodyType={getBodyType} value={bodyType}/>
       <Clr color={getColor} />
-      <FuelType fuelType={getFuelType} />
-      <Transmission transmission={getTransmission} />
-      <Mileage mileage={getMileage} />
-      <Power power={getPower} />
-      <Year year={getYear} />
-      <EngineDisplacement engine={getEngine}/>
+      <FuelType fuelType={getFuelType} value={fuelType}/>
+      <Transmission transmission={getTransmission} value={transmission}/>
+      <Mileage mileage={getMileage} value={mileage}/>
+      <Power power={getPower} value={power}/>
+      <Year year={getYear} value={year}/>
+      <EngineDisplacement engine={getEngine} value={engine}/>
       <button type="submit">Check Price!</button>
     </form>
   );
