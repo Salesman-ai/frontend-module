@@ -1,16 +1,4 @@
-const bodyTypes = [
-  "coupe",
-  "sedan",
-  "minivan",
-  "station wagon",
-  "hatchback 3 doors",
-  "hatchback 5 doors",
-  "jeep 3 dors",
-  "jeep 5 dors",
-  "liftback",
-  "open",
-  "pickup",
-];
+import data from "../../data/data.json"
 const BodyType = (props) => {
   const changeBodyType = (event) => {
     props.bodyType(event.target.value);
@@ -22,7 +10,7 @@ const BodyType = (props) => {
         <option hidden value="Choose a body type">
           Choose a body type
         </option>
-        {bodyTypes.map((type) => (
+        {data["bodyType"].map((type) => (
           <option value={type} key={type}>
             {type}
           </option>

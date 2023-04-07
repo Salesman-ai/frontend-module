@@ -1,4 +1,4 @@
-import data from "./cars.json";
+import data from "../../data/cars.json";
 import React, { useState } from "react";
 const BrandAndModel = (props) => {
   const [brand, setBrand] = useState("");

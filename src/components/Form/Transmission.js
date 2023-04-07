@@ -1,5 +1,5 @@
+import data from "../../data/data.json"
 const Transmission = (props) => {
-  const transmissions = ["AT", "CVT", "Automatic", "Manual", "Robot"];
   const changeTransmission = (event) => {
     props.transmission(event.target.value);
   };
@@ -10,7 +10,7 @@ const Transmission = (props) => {
         <option hidden value="Choose a transmission">
           Choose a transmission
         </option>
-        {transmissions.map((transmission) => (
+        {data['transmission'].map((transmission) => (
           <option key={transmission} value={transmission}>
             {transmission}
           </option>

@@ -1,0 +1,14 @@
+{"bodyType": [
+    "coupe",
+    "sedan",
+    "minivan",
+    "station wagon",
+    "hatchback 3 doors",
+    "hatchback 5 doors",
+    "jeep 3 dors",
+    "jeep 5 dors",
+    "liftback",
+    "open",
+    "pickup"], 
+    "fuelType": ["gasoline", "diesel", "electro"], 
+    "transmission": ["AT", "CVT", "Automatic", "Manual", "Robot"]}

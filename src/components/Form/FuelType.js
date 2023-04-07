@@ -1,5 +1,5 @@
+import data from "../../data/data.json"
 const FuelType = (props) => {
-  const fuelTypes = ["gasoline", "diesel", "electro"];
   const changeFuelType = (event) => {
     props.fuelType(event.target.value);
   };
@@ -10,7 +10,7 @@ const FuelType = (props) => {
         <option hidden value="Choose a fuel type">
           Choose a fuel type
         </option>
-        {fuelTypes.map((type) => (
+        {data["fuelType"].map((type) => (
           <option value={type} key={type}>
             {type}
           </option>
