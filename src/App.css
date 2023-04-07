@@ -3,20 +3,20 @@
   justify-content: center;
   align-items: center;
   background-color: #072037;
-  height: 5rem;
+  height: 10vh;
   width: 100%;
   color: #22add9;
-  font-size: 2rem;
+  font-size: 3vh;
   text-align: center;
-  padding-top: 1rem;
-  line-height: 1.5rem;
+  padding-top: 1vh;
+  line-height: 2.5vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .container::first-letter {
   color: White;
-  font-size: 4rem;
+  font-size: 6vh;
 }
 
 .container {
@@ -26,4 +26,40 @@
   width: 10px;
   height: 10px;
   border: 1px solid #c7c7cb;
+}
+
+.row{
+  display:flex;
+  height: 86vh;
+  justify-content: space-around;
+  background-color: #EBEFF1; width: 100%;
+}
+.left{
+  border-radius: 2%;
+  margin-top:10vh;
+  width: 50%;
+  height: 60vh;
+  background-color: white;
+
+}
+
+.right{
+  border-radius: 2%;
+  width: 30%;
+  height: 60vh;
+  background-color: white;
+  margin-top:10vh;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.block{
+  display:block
 }

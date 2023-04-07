@@ -1,11 +1,11 @@
-import BrandAndModel from "./BrandAndModel";
-import BodyType from "./BodyType";
-import FuelType from "./FuelType";
-import Transmission from "./Transmission";
-import Mileage from "./Mileage";
-import Power from "./Power";
-import Year from "./Year";
-import EngineDisplacement from './EngineDisplacement'
+import BrandAndModel from "./Form/BrandAndModel";
+import BodyType from "./Form/BodyType";
+import FuelType from "./Form/FuelType";
+import Transmission from "./Form/Transmission";
+import Mileage from "./Form/Mileage";
+import Power from "./Form/Power";
+import Year from "./Form/Year";
+import EngineDisplacement from './Form/EngineDisplacement'
 import { useState } from "react";
 import axios from 'axios';
 
@@ -70,7 +70,7 @@ const Form = () => {
       .catch((error) => console.log(error));
   }
   return (
-    <form onSubmit={sendForm}>
+    <form onSubmit={sendForm} className="form">
       <BrandAndModel brand={getBrand} model={getModel} />
       <BodyType bodyType={getBodyType} value={bodyType}/>
       <FuelType fuelType={getFuelType} value={fuelType}/>
