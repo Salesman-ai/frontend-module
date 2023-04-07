@@ -1,6 +1,5 @@
 import BrandAndModel from "./BrandAndModel";
 import BodyType from "./BodyType";
-import Clr from "./Color";
 import FuelType from "./FuelType";
 import Transmission from "./Transmission";
 import Mileage from "./Mileage";
@@ -15,7 +14,6 @@ const Form = () => {
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [bodyType, setBodyType] = useState("");
-  const [color, setColor] = useState("");
   const [fuelType, setFuelType] = useState("");
   const [mileage, setMileage] = useState("");
   const [power, setPower] = useState("");
@@ -30,9 +28,6 @@ const Form = () => {
   };
   const getBodyType = (data) => {
     setBodyType(data);
-  };
-  const getColor = (data) => {
-    setColor(data);
   };
   const getFuelType = (data) => {
     setFuelType(data);
@@ -58,7 +53,6 @@ const Form = () => {
       brand: brand,
       name: model,
       bodyType: bodyType,
-      color: color,
       fuelType: fuelType,
       year: year,
       mileage: mileage,
@@ -79,7 +73,6 @@ const Form = () => {
     <form onSubmit={sendForm}>
       <BrandAndModel brand={getBrand} model={getModel} />
       <BodyType bodyType={getBodyType} value={bodyType}/>
-      <Clr color={getColor} />
       <FuelType fuelType={getFuelType} value={fuelType}/>
       <Transmission transmission={getTransmission} value={transmission}/>
       <Mileage mileage={getMileage} value={mileage}/>
