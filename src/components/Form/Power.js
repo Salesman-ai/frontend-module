@@ -3,7 +3,7 @@ const Power = (props) => {
     props.power(event.target.value);
   };
   return (
-    <div>
+    <div className="block">
       <label> Power</label>
       <input
         type="number"

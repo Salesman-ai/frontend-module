@@ -1,6 +1,7 @@
 const Result = () =>{
-    return <p>
-        Price of car: X
-    </p>
+    return <div className="center">
+        <p>Fill a form to get a price!</p>
+        <p className="price">...</p>
+        </div>
 }
 export default Result

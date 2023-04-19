@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
 .Navbar {
   display: flex;
   justify-content: center;
@@ -6,10 +7,10 @@
   height: 10vh;
   width: 100%;
   color: #22add9;
-  font-size: 3vh;
+  font-size: 4vh;
   text-align: center;
   padding-top: 1vh;
-  line-height: 2.5vh;
+  line-height: 3.5vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -30,7 +31,7 @@
 
 .row{
   display:flex;
-  height: 86vh;
+  height: 40rem;
   justify-content: space-around;
   background-color: #EBEFF1; width: 100%;
 }
@@ -38,7 +39,7 @@
   border-radius: 2%;
   margin-top:10vh;
   width: 50%;
-  height: 60vh;
+  height: 80%;
   background-color: white;
 
 }
@@ -49,17 +50,57 @@
   height: 60vh;
   background-color: white;
   margin-top:10vh;
-}
-
-.form{
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
   align-items: center;
-  align-content: flex-start;
+  justify-content: center;
 }
 
-.block{
-  display:block
+.center{
+  text-align: center;
+}
+.form{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  margin:5%;
+  
+}
+
+.block {
+  display:flex;
+  flex-direction: column;
+}
+.block label,select{
+  display: block;
+  width: 100%;
+}
+
+.button{
+background: #072037;
+border: 1px solid #072037;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 4px;
+height: 3rem;
+color:white;
+font-family: 'Aldrich'
+}
+
+.block select,input{
+  background: #FFFFFF;
+border: 1px solid #C7C7CB;
+border-radius: 5px;
+height: 2rem;
+font-family: 'Aldrich';
+width:100%
+}
+.price{
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+body{
+  font-family: 'Aldrich';
+}
+
+.block label{
+  font-weight: bold;
+  padding-bottom: 2%;
 }

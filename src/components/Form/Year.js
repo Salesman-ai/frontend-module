@@ -3,7 +3,7 @@ const Year = (props) => {
     props.year(event.target.value);
   };
   return (
-    <div>
+    <div className="block">
       <label> Year</label>
       <input
         type="number"

@@ -4,7 +4,7 @@ const FuelType = (props) => {
     props.fuelType(event.target.value);
   };
   return (
-    <div>
+    <div className="block">
       <label>Fuel Type</label>
       <select value={props.value} onChange={changeFuelType}>
         <option hidden value="Choose a fuel type">

@@ -3,9 +3,7 @@ import Result from './Result'
 const Main = () =>{
 return (
 <div className='row'>
-<div className='left'>
-        <Form/>
-</div>
+<Form/>
 <div className="right">
          <Result/>
 </div>
