@@ -2,7 +2,7 @@ const EngineDisplacement = props =>{
     const changeEngine = event =>{
         props.engine(event.target.value)
     }
-    return <div>
+    return <div className="block">
       <label> Engine Displacement</label>
       <input
         type="number"

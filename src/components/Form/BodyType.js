@@ -4,7 +4,7 @@ const BodyType = (props) => {
     props.bodyType(event.target.value);
   };
   return (
-    <div>
+    <div className="block">
       <label>Body Type</label>
       <select value={props.value} onChange={changeBodyType}>
         <option hidden value="Choose a body type">

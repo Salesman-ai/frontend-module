@@ -4,7 +4,7 @@ const Transmission = (props) => {
     props.transmission(event.target.value);
   };
   return (
-    <div>
+    <div className="block">
       <label>Transmission</label>
       <select value={props.value} onChange={changeTransmission}>
         <option hidden value="Choose a transmission">

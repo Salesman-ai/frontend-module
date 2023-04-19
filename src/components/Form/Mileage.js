@@ -3,7 +3,7 @@ const Mileage = (props) => {
     props.mileage(event.target.value);
   };
   return (
-    <div>
+    <div className="block">
       <label> Mileage</label>
       <input
         type="number"
