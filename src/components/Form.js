@@ -11,7 +11,7 @@ import { useState } from "react";
 import axios from 'axios';
 
 
-const Form = () => {
+const Form = (props) => {
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [bodyType, setBodyType] = useState("");
@@ -71,7 +71,7 @@ const Form = () => {
   async function sendRequest(car) {
     axios
       .post("http://192.168.58.4:8080/api/get-price", car)
-      .then((response) => console.log(response))
+      .then((response) => props.result(response))
       .catch((error) => console.log(error));
   }
   return (
