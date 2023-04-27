@@ -1,4 +1,4 @@
-import BrandAndModel from "./Form/Brand";
+import Brand from "./Form/Brand";
 import BodyType from "./Form/BodyType";
 import FuelType from "./Form/FuelType";
 import Transmission from "./Form/Transmission";
@@ -77,7 +77,7 @@ const Form = (props) => {
   return (
     <div className='left'>
     <form onSubmit={sendForm} className="form">
-      <BrandAndModel brand={getBrand} models={getModels}/>
+      <Brand brand={getBrand} models={getModels}/>
       <Model model={getModel} models={models}/>
       <BodyType bodyType={getBodyType} value={bodyType}/>
       <FuelType fuelType={getFuelType} value={fuelType}/>
