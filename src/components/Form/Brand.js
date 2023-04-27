@@ -11,7 +11,7 @@ const Brand = (props) => {
   };
 
   return (
-      <div className="block">
+      <div className="block top">
         <label>Brand</label>
         <select value={brand} onChange={changeBrand}>
           <option hidden value="choose a brand">

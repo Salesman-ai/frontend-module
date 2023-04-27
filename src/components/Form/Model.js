@@ -9,7 +9,7 @@ const Model = (props) => {
   };
 
   return (
-      <div className="block">
+      <div className="block top">
         <label>Model</label>
         <select value={model} onChange={changeModel}>
           <option hidden value="Choose a model">
