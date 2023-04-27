@@ -5,11 +5,10 @@ import Transmission from "./Form/Transmission";
 import Mileage from "./Form/Mileage";
 import Power from "./Form/Power";
 import Year from "./Form/Year";
-import Model from "./Form/Model"
-import EngineDisplacement from './Form/EngineDisplacement'
+import Model from "./Form/Model";
+import EngineDisplacement from "./Form/EngineDisplacement";
 import { useState } from "react";
-import axios from 'axios';
-
+import axios from "axios";
 
 const Form = (props) => {
   const [brand, setBrand] = useState("");
@@ -20,14 +19,14 @@ const Form = (props) => {
   const [power, setPower] = useState("");
   const [transmission, setTransmission] = useState("");
   const [year, setYear] = useState("");
-  const [engine,setEngine] = useState("");
-  const [models,setModels] = useState([])
+  const [engine, setEngine] = useState("");
+  const [models, setModels] = useState([]);
   const getBrand = (data) => {
     setBrand(data);
   };
   const getModels = (data) => {
     setModels(data);
-  };  
+  };
   const getModel = (data) => {
     setModel(data);
   };
@@ -49,47 +48,48 @@ const Form = (props) => {
   const getYear = (data) => {
     setYear(data);
   };
-  const getEngine = data =>{
-    setEngine(data)
-  }
+  const getEngine = (data) => {
+    setEngine(data);
+  };
   const sendForm = (event) => {
     event.preventDefault();
+
     const car = {
-      brand: brand,
-      name: model,
+      mileage: mileage,
+      year: year,
       bodyType: bodyType,
       fuelType: fuelType,
-      year: year,
-      mileage: mileage,
-      transmission: transmission,
-      power: power,
+      brand: brand,
+      name: model,
+      tranny: transmission,
       engineDisplacement: engine,
+      power: power,
     };
     sendRequest(car);
-    console.log(car)
+    console.log(car);
   };
   async function sendRequest(car) {
     axios
-      .get("http://192.168.58.4:8080/api-backend/get-price", car)
-      .then((response) => props.result(response))
+      .post("http://localhost:8080/api-backend/get-price", car)
+      .then((response) => props.result(response.data))
       .catch((error) => console.log(error));
   }
   return (
-    <div className='left'>
-    <form onSubmit={sendForm} className="form">
-      <Brand brand={getBrand} models={getModels}/>
-      <Model model={getModel} models={models}/>
-      <BodyType bodyType={getBodyType} value={bodyType}/>
-      <FuelType fuelType={getFuelType} value={fuelType}/>
-      <Transmission transmission={getTransmission} value={transmission}/>
-      <Mileage mileage={getMileage} value={mileage}/>
-      <Power power={getPower} value={power}/>
-      <Year year={getYear} value={year}/>
-      <EngineDisplacement engine={getEngine} value={engine}/>
-      <button type="submit" className="button">Check Price!</button>
-    </form>
-
-
+    <div className="left">
+      <form onSubmit={sendForm} className="form">
+        <Brand brand={getBrand} models={getModels} />
+        <Model model={getModel} models={models} />
+        <BodyType bodyType={getBodyType} value={bodyType} />
+        <FuelType fuelType={getFuelType} value={fuelType} />
+        <Transmission transmission={getTransmission} value={transmission} />
+        <Mileage mileage={getMileage} value={mileage} />
+        <Power power={getPower} value={power} />
+        <Year year={getYear} value={year} />
+        <EngineDisplacement engine={getEngine} value={engine} />
+        <button type="submit" className="button">
+          Check Price!
+        </button>
+      </form>
     </div>
   );
 };
