@@ -70,7 +70,7 @@ const Form = (props) => {
   };
   async function sendRequest(car) {
     axios
-      .post("http://localhost:8080/api-backend/get-price", car)
+      .post("http://192.168.58.4:8080/api-backend/get-price", car)
       .then((response) => props.result(response.data))
       .catch((error) => console.log(error));
   }
