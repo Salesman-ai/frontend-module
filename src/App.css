@@ -42,7 +42,7 @@ body{
 
 .left{
   border-radius: 2%;
-  width: 50%;
+  width: 60%;
   height: 95%;
   background-color: white;
 }
@@ -62,55 +62,56 @@ body{
 .form{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5%;
+  gap: 0% 5%;
   padding: 0% 5%;
   height: 100%;
 }
-
-.block {
-  display:flex;
-  flex-direction: column;
-  height: 100%;
+@media screen and (max-width: 768px) {
+  .form {
+    grid-template-columns: 1fr;
+    gap: 0%;
+  }
+  .button{margin-top: 0}
+  .left{height: 100%;}
+  .block{height: 10%;}
+  .top{padding-top: 0;}
+  .Navbar{height: 10%;
+  font-size: 3vh;
+line-height: 2vh;}
+  .first p::first-letter{
+    font-size: 5vh;
+    color: white;
+  }
+  .block input{
+    height: 50%;
+    width: 100%;
+  }
+  .block select{
+    height: 50%;
+    width: 100%;
+  }
 }
-
-
 .button{
 background: #072037;
 border: 1px solid #072037;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 4px;
-height: 3rem;
-margin-top: 10%;
+height: 100%;
 color:white;
 font-family: 'Aldrich'
 }
-.block label,select{
-  display: block;
+.block{
+  display: flex;
+  flex-direction: column;
+}
+.block input{
+  height: 5vh;
   width: 100%;
 }
-
-.block select,input{
-background: #FFFFFF;
-border: 1px solid #C7C7CB;
-border-radius: 5px;
-height: 60%;
-font-family: 'Aldrich';
-width:100%
+.block select{
+  height: 5vh;
+  width: 100%;
 }
-
-.block input{
-  height: 55%;
-}
-.price{
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-
-.block label{
-  font-weight: bold;
-  padding-bottom: 2%;
-}
-
-.top{
+/* .top{
   padding-top: 5%;
-}
+} */

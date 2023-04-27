@@ -8,7 +8,6 @@ const Transmission = (props) => {
       <label>Transmission</label>
       <select value={props.value} onChange={changeTransmission}>
         <option hidden value="Choose a transmission">
-          Choose a transmission
         </option>
         {data['transmission'].map((transmission) => (
           <option key={transmission} value={transmission}>

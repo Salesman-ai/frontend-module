@@ -3,7 +3,7 @@ const EngineDisplacement = props =>{
         props.engine(event.target.value)
     }
     return <div className="block">
-      <label> Engine Displacement</label>
+      <label> Engine</label>
       <input
         type="number"
         min="0"

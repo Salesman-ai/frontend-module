@@ -8,7 +8,7 @@ const BodyType = (props) => {
       <label>Body Type</label>
       <select value={props.value} onChange={changeBodyType}>
         <option hidden value="Choose a body type">
-          Choose a body type
+            
         </option>
         {data["bodyType"].map((type) => (
           <option value={type} key={type}>

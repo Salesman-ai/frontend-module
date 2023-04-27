@@ -15,7 +15,6 @@ const Brand = (props) => {
         <label>Brand</label>
         <select value={brand} onChange={changeBrand}>
           <option hidden value="choose a brand">
-            Choose a brand
           </option>
           {Object.keys(data).map((car) => (
             <option value={car} key={car}>
