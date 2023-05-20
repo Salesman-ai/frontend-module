@@ -6,7 +6,7 @@ const Result = (props) => {
         <p className="result">Fill a form to get a price!</p>
       )}
       {typeof props.result !== "undefined" && (
-        <p className="result"> Price of your car is </p>
+        <p className="result filled"> Price of your car is </p>
       )}
       <p className="price">{props.result}</p>
     </div>
