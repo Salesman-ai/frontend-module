@@ -65,7 +65,8 @@ const Form = (props) => {
       engineDisplacement: engine,
       power: power,
     };
-    sendRequest(car);
+    // sendRequest(car);
+    props.result(100);
     console.log(car);
   };
   async function sendRequest(car) {
