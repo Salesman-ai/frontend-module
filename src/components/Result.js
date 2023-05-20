@@ -1,5 +1,4 @@
 const Result = (props) => {
-  console.log(props.result);
   return (
     <div className="center">
       {typeof props.result === "undefined" && (
