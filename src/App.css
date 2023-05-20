@@ -27,7 +27,7 @@ body {
   background-color: #ebeff1;
 }
 .holder {
-  height: 100vh;
+  height: 95vh;
   width: 100%;
 }
 
@@ -50,7 +50,7 @@ body {
 .right {
   border-radius: 2%;
   width: 30%;
-  height: 60%;
+  height: 65%;
   background-color: white;
   display: flex;
   align-items: center;
@@ -63,23 +63,68 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0% 5%;
+  margin-top: 2%;
   padding: 0% 5%;
   height: 100%;
 }
+
+.button {
+  background: #072037;
+  border: 1px solid #072037;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 60%;
+  color: white;
+  font-family: "Aldrich";
+  font-size: 100%;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+}
+.block input {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  height: 5vh;
+  width: 100%;
+  border: 1px solid black;
+}
+.block select {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  height: 5vh;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.price{
+  font-size: 5vh;
+  font-family: 'Aldrich';
+  text-shadow: 7px 6px 10px rgba(66, 68, 90, 1);
+}
+
+.result{
+  font-size: 4vh;
+}
+
 @media screen and (max-width: 768px) {
   .form {
     grid-template-columns: 1fr;
     gap: 0%;
   }
   .button {
-    margin-top: 0;
-    height: 100%;
+    height: 80%;
   }
   .left {
     height: 100%;
+    width: 80%;
+  }
+  .right{
+    height: 25%;
+    width: 80%;
   }
   .block {
-    height: 10%;
+    height:80%;
   }
   .Navbar {
     height: 10%;
@@ -91,38 +136,21 @@ body {
     color: white;
   }
   .row {
-    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
   }
   .block input {
-    height: 50%;
+    height: 100%;
     width: 100%;
   }
   .block select {
-    height: 50%;
+    height: 100%;
     width: 100%;
   }
-}
-.button {
-  background: #072037;
-  border: 1px solid #072037;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  height: 60%;
-  color: white;
-  font-family: "Aldrich";
-}
-.top {
-  padding-top: 5%;
-}
-.block {
-  display: flex;
-  flex-direction: column;
-}
-.block input {
-  height: 5vh;
-  width: 100%;
-}
-.block select {
-  height: 5vh;
-  width: 100%;
+  .filled{
+    display: none;
+  }
 }
