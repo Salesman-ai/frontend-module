@@ -9,6 +9,7 @@ const Power = (props) => {
         type="number"
         min="1"
         step="1"
+        max="1000"
         value={props.value}
         onChange={changePower}
       ></input>
