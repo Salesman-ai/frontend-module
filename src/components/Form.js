@@ -51,9 +51,21 @@ const Form = (props) => {
   const getEngine = (data) => {
     setEngine(data);
   };
+  const checkFilledInputs = () => {
+    return (
+      brand !== "" &&
+      bodyType !== "" &&
+      model !== "" &&
+      fuelType !== "" &&
+      mileage !== "" &&
+      power !== "" &&
+      transmission !== "" &&
+      year !== "" &&
+      engine !== ""
+    );
+  };
   const sendForm = (event) => {
     event.preventDefault();
-
     const car = {
       mileage: mileage,
       year: year,
@@ -85,7 +97,11 @@ const Form = (props) => {
         <Power power={getPower} value={power} />
         <Year year={getYear} value={year} />
         <EngineDisplacement engine={getEngine} value={engine} />
-        <button type="submit" className="button">
+        <button
+          type="submit"
+          className="button"
+          disabled={!checkFilledInputs()}
+        >
           Check Price!
         </button>
       </form>

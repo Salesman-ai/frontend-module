@@ -97,14 +97,17 @@ body {
   border: 1px solid black;
 }
 
-.price{
+.price {
   font-size: 5vh;
-  font-family: 'Aldrich';
+  font-family: "Aldrich";
   text-shadow: 7px 6px 10px rgba(66, 68, 90, 1);
 }
 
-.result{
+.result {
   font-size: 4vh;
+}
+.button:disabled {
+  background-color: gray;
 }
 
 @media screen and (max-width: 768px) {
@@ -119,12 +122,12 @@ body {
     height: 100%;
     width: 80%;
   }
-  .right{
+  .right {
     height: 25%;
     width: 80%;
   }
   .block {
-    height:80%;
+    height: 80%;
   }
   .Navbar {
     height: 10%;
@@ -150,7 +153,10 @@ body {
     height: 100%;
     width: 100%;
   }
-  .filled{
+  .filled {
     display: none;
+  }
+  .button:disabled {
+    background-color: gray;
   }
 }
